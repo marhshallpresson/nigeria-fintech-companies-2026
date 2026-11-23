@@ -1,0 +1,41 @@
+{
+  "updated": "2026-11-23",
+  "stats": [
+    { "value": "433+", "label": "Fintechs mapped", "note": "12 categories, 2024 snapshot" },
+    { "value": "~28%", "label": "Of Africa's fintechs", "note": "Techpoint, Apr 2026" },
+    { "value": "$10.6B", "label": "Top 9, combined value", "note": "As of Jan 2026" }
+  ],
+  "leaders": [
+    { "company": "Flutterwave", "does": "Business payments, cross-border, Send App", "signal": "$3.2B (Ripple-led round, Jun 2026); bought Mono" },
+    { "company": "OPay", "does": "Wallet, agent banking, super app", "signal": "~$3.1B implied; 50M+ users; US listing reported" },
+    { "company": "Moniepoint", "does": "Business banking, POS terminals", "signal": "Unicorn; ₦412T processed in 2025" },
+    { "company": "PalmPay", "does": "Consumer wallet, cashback", "signal": "40M+ users; raising above $1B (reported)" },
+    { "company": "Paystack", "does": "Payment APIs, Zap app (Stripe-owned)", "signal": "Group profitable; now a microfinance bank" },
+    { "company": "Interswitch", "does": "Switching, Verve cards, Quickteller", "signal": "~$1B; no listing date" },
+    { "company": "Kuda", "does": "Neobank", "signal": "7M customers; 2024 loss down 84%" },
+    { "company": "Paga", "does": "Mobile money, business payments", "signal": "$11B processed in 2025; PayPal partner" },
+    { "company": "LemFi", "does": "Diaspora remittances", "signal": "$53M Series B (Jan 2025)" },
+    { "company": "PiggyVest", "does": "Savings and investment", "signal": "6M+ accounts" }
+  ],
+  "categories": [
+    { "name": "Payments, gateways & processing", "companies": ["Flutterwave", "Paystack", "Interswitch", "Kora (Korapay)", "Remita (SystemSpecs)", "eTranzact", "Monnify (Moniepoint)", "Squad (GTCO)", "Fincra", "Nomba", "BudPay", "Baxi", "Hydrogen Pay", "Seerbit", "Credo", "Quickteller", "Unified Payments", "Global Accelerex"] },
+    { "name": "Wallets, mobile money & PSBs", "companies": ["OPay", "PalmPay", "Paga", "MoMo PSB (MTN)", "SmartCash PSB (Airtel)", "9PSB", "HopePSB", "Eyowo", "Chipper Cash"], "note": "OPay, PalmPay, Moniepoint, Kuda and Paga got national microfinance licences in January 2026." },
+    { "name": "Digital banks & neobanks", "companies": ["Moniepoint", "Kuda", "VFD / VBank", "Sparkle", "Carbon", "FairMoney", "Rubies", "Mint (Fina Trust)", "ALAT (Wema)", "Specta (Sterling)"] },
+    { "name": "Lending & credit", "companies": ["FairMoney", "Carbon", "Renmoney", "Branch", "PalmCredit", "Aella", "Migo", "QuickCheck", "Page Financials", "Lendsqr (lending software)", "CreditChek (credit data)"] },
+    { "name": "Savings, wealth & investing", "companies": ["PiggyVest", "Cowrywise", "Risevest", "Bamboo", "Trove", "Chaka", "Afrinvest", "Kolo (by Fluidcoins)"] },
+    { "name": "Remittances & cross-border", "companies": ["LemFi", "Send App (Flutterwave)", "MonieWorld (Moniepoint, UK product being phased out from Aug 2026)", "Afriex", "Grey", "Raenest", "Cleva", "Nala", "Kora"] },
+    { "name": "Infrastructure, BaaS & identity", "companies": ["NIBSS", "Mono (now Flutterwave)", "Anchor", "Sudo Africa", "Smile ID", "Youverify", "Dojah", "Prembly", "Lendsqr", "OnePipe", "Paystack's TSG Labs"] },
+    { "name": "Crypto & stablecoins", "companies": ["Quidax", "Busha", "Yellow Card", "Roqqu", "Breet", "Patricia", "Bitmama"], "note": "Licensing for crypto runs through the SEC. Check its registry before using any of these." },
+    { "name": "Insurtech & B2B / SME tools", "companies": ["Curacel", "Casava", "MyCoverGenius", "Brass", "Duplo", "Moniebook (Moniepoint)", "Bumpa"] }
+  ],
+  "exits": [
+    "Okra shut down in May 2025 after raising $16.5M.",
+    "Thepeer and Lazerpay have also shut down.",
+    "Mono was bought by Flutterwave in January 2026 for about $30M in stock."
+  ],
+  "registers": [
+    { "name": "CBN payment service provider register", "desc": "every licensed payment company, grouped by licence type." },
+    { "name": "SEC registered fintech operators", "desc": "investment, crowdfunding and digital-asset firms." },
+    { "name": "Nigeria Fintech Map 2024", "desc": "the 433-company visual map." }
+  ]
+}

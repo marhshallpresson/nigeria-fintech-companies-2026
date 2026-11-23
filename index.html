@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nigeria's Fintech Companies, Mapped (2026)</title>
+<meta name="description" content="About 90 of Nigeria's most important fintech companies, grouped by category, with 2026 signals.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#141414; --muted:#6b6b6b; --faint:#a8a8a8; --line:#dedede; --bg:#fff; --accent:#0a7d4f; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 Inter, system-ui, sans-serif; }
+  .wrap { max-width:880px; margin:0 auto; padding:48px 24px 80px; }
+  .meta { display:flex; justify-content:space-between; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); font-weight:600; }
+  h1 { font-family:"Archivo Black", sans-serif; font-size:clamp(44px, 9vw, 84px); line-height:.98; margin:48px 0 28px; letter-spacing:-.01em; }
+  h2 { font-family:"Archivo Black", sans-serif; font-size:22px; display:inline-block; border-bottom:2px solid var(--faint); padding-bottom:2px; margin:64px 0 28px; }
+  .lede { color:var(--muted); max-width:720px; }
+  .lede strong { color:var(--ink); font-weight:500; }
+  .stats { display:grid; grid-template-columns:repeat(3,1fr); border:1px solid var(--ink); margin:32px 0 0; }
+  .stat { text-align:center; padding:14px 8px; border-right:1px solid var(--line); }
+  .stat:last-child { border-right:0; }
+  .stat b { display:block; font-family:"Archivo Black", sans-serif; font-size:26px; font-weight:400; }
+  .stat span { display:block; font-size:14px; color:var(--muted); }
+  .stat small { color:var(--faint); font-size:13px; }
+  .row { display:grid; grid-template-columns:240px 1fr; gap:24px; padding:20px 0; }
+  .row > .label { font-weight:500; }
+  .tag { display:inline-block; margin-top:6px; border:1px solid var(--faint); color:var(--muted); font-size:9px; letter-spacing:.18em; padding:1px 8px; text-transform:uppercase; font-weight:600; }
+  table { width:100%; border-collapse:collapse; font-size:15px; }
+  th { font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--faint); font-weight:500; text-align:left; padding:8px; border-bottom:1px solid var(--line); }
+  td { padding:12px 8px; border-bottom:1px solid var(--line); vertical-align:top; color:var(--muted); }
+  td:first-child { color:var(--ink); font-weight:500; white-space:nowrap; }
+  .chips { display:flex; flex-wrap:wrap; gap:6px; }
+  .chip { border:1px solid var(--line); border-radius:999px; padding:3px 11px; font-size:14px; color:#333; }
+  .note { margin:12px 0 0; font-size:14px; color:var(--muted); padding-left:14px; border-left:2px solid var(--accent); }
+  ul.plain { margin:0; padding-left:18px; color:var(--muted); }
+  ul.plain li { margin-bottom:6px; }
+  .search { width:100%; padding:12px 14px; font:inherit; border:1px solid var(--line); border-radius:8px; margin-bottom:8px; }
+  hr { border:0; border-top:1px solid var(--line); margin:56px 0 0; }
+  form { display:grid; gap:14px; max-width:620px; }
+  label { font-size:13px; font-weight:600; display:grid; gap:6px; }
+  input, select, textarea { font:inherit; padding:10px 12px; border:1px solid #cfcfcf; border-radius:8px; background:#fff; }
+  textarea { min-height:120px; resize:vertical; }
+  .two { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  button { justify-self:start; background:var(--ink); color:#fff; border:0; border-radius:8px; padding:12px 22px; font:600 15px Inter, sans-serif; cursor:pointer; }
+  button:disabled { opacity:.5; cursor:wait; }
+  .hp { position:absolute; left:-9999px; }
+  #status { font-size:14px; min-height:1.4em; }
+  #status.ok { color:var(--accent); } #status.err { color:#b42318; }
+  footer { margin-top:64px; font-size:13px; color:var(--faint); }
+  @media (max-width:680px) {
+    .row { grid-template-columns:1fr; gap:10px; }
+    .stats { grid-template-columns:1fr; }
+    .stat { border-right:0; border-bottom:1px solid var(--line); }
+    .two { grid-template-columns:1fr; }
+    td:first-child { white-space:normal; }
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="meta"><span>Report</span><span id="updated">Updated November 23 2026</span></div>
+  <h1>Nigeria's Fintech Companies, Mapped</h1>
+  <p class="lede"><strong>No single list holds "all" of them. The best count is 433+ companies across 12 categories, and a handful dominate.</strong>
+    That figure comes from Segun Adeyemi's Nigeria Fintech Map 2024, which its own authors call a snapshot rather than a full list.
+    Below are about 90 of the most important names, grouped by what they do. The top players are confirmed against 2026 reporting.
+    The longer lists are well-known names whose current status you should check before relying on them.</p>
+  <div class="stats" id="stats"></div>
+  <hr>
+
+  <h2>I. The Big Players</h2>
+  <div class="row">
+    <div><div class="label">Leaders by value and scale</div><span class="tag">Verified 2026</span></div>
+    <table>
+      <thead><tr><th>Company</th><th>What it does</th><th>Latest signal</th></tr></thead>
+      <tbody id="leaders"></tbody>
+    </table>
+  </div>
+
+  <h2>II. By Category</h2>
+  <input class="search" id="q" type="search" placeholder="Search companies…" aria-label="Search companies">
+  <div id="categories"></div>
+
+  <h2>III. Gone or Absorbed</h2>
+  <div class="row">
+    <div><div class="label">Recent exits</div><span class="tag">Don't use</span></div>
+    <ul class="plain" id="exits"></ul>
+  </div>
+
+  <h2>IV. For the Full List</h2>
+  <div class="row">
+    <div class="label">Official registers</div>
+    <div>
+      <ul class="plain" id="registers"></ul>
+      <p class="lede" style="font-size:15px">A listing on a register shows that a specific legal entity holds a specific licence. It doesn't cover every product a brand markets.</p>
+    </div>
+  </div>
+
+  <h2 id="contact">V. Suggest an Update</h2>
+  <div class="row">
+    <div><div class="label">Spot something out of date?</div><p class="lede" style="font-size:14px;margin-top:6px">Send a new company, a correction or a shutdown. Each submission is reviewed before the list changes.</p></div>
+    <form id="form" novalidate>
+      <div class="two">
+        <label>Your name<input name="name" required maxlength="100"></label>
+        <label>Email<input name="email" type="email" required maxlength="200"></label>
+      </div>
+      <div class="two">
+        <label>Type of update
+          <select name="type">
+            <option>Add a company</option>
+            <option>Correct a company</option>
+            <option>Company shut down / acquired</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label>Company<input name="company" maxlength="120" placeholder="e.g. Moniepoint"></label>
+      </div>
+      <label>Details and source<textarea name="message" required maxlength="4000" placeholder="What should change, and a link that backs it up"></textarea></label>
+      <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button type="submit" id="send">Send update</button>
+      <div id="status" role="status"></div>
+    </form>
+  </div>
+
+  <footer>Data lives in <code>data.json</code>. Updates sent through the form are reviewed before they are added.</footer>
+</main>
+
+<script>
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+fetch('data.json', { cache: 'no-cache' }).then(r => r.json()).then(d => {
+  if (d.updated) document.getElementById('updated').textContent = 'Updated ' + new Date(d.updated + 'T00:00:00').toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' });
+  document.getElementById('stats').innerHTML = d.stats.map(s => `<div class="stat"><b>${esc(s.value)}</b><span>${esc(s.label)}</span><small>${esc(s.note)}</small></div>`).join('');
+  document.getElementById('leaders').innerHTML = d.leaders.map(l => `<tr><td>${esc(l.company)}</td><td>${esc(l.does)}</td><td>${esc(l.signal)}</td></tr>`).join('');
+  const cat = document.getElementById('categories');
+  const render = q => {
+    q = q.trim().toLowerCase();
+    cat.innerHTML = d.categories.map((c, i) => {
+      const list = c.companies.filter(n => !q || n.toLowerCase().includes(q) || c.name.toLowerCase().includes(q));
+      if (!list.length) return '';
+      return `<div class="row"><div class="label">${i + 1}. ${esc(c.name)}</div><div><div class="chips">${list.map(n => `<span class="chip">${esc(n)}</span>`).join('')}</div>${c.note ? `<p class="note">${esc(c.note)}</p>` : ''}</div></div>`;
+    }).join('') || '<p class="lede">No matches.</p>';
+  };
+  render('');
+  document.getElementById('q').addEventListener('input', e => render(e.target.value));
+  document.getElementById('exits').innerHTML = d.exits.map(e => `<li>${esc(e)}</li>`).join('');
+  document.getElementById('registers').innerHTML = d.registers.map(r => `<li>${r.url ? `<a href="${esc(r.url)}">${esc(r.name)}</a>` : `<span style="color:var(--ink)">${esc(r.name)}</span>`}: ${esc(r.desc)}</li>`).join('');
+});
+
+const form = document.getElementById('form'), status = document.getElementById('status'), btn = document.getElementById('send');
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  if (!form.reportValidity()) return;
+  btn.disabled = true; status.className = ''; status.textContent = 'Sending…';
+  try {
+    const res = await fetch('/api/contact', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(Object.fromEntries(new FormData(form))) });
+    const out = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(out.error || 'Something went wrong.');
+    status.className = 'ok'; status.textContent = 'Thanks. Your update was received and will be reviewed.';
+    form.reset();
+  } catch (err) {
+    status.className = 'err'; status.textContent = err.message;
+  } finally { btn.disabled = false; }
+});
+</script>
+</body>
+</html>
