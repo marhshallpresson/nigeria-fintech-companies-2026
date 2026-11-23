@@ -47,6 +47,8 @@
   .hp { position:absolute; left:-9999px; }
   #status { font-size:14px; min-height:1.4em; }
   #status.ok { color:var(--accent); } #status.err { color:#b42318; }
+  sup a { color:var(--faint); text-decoration:none; font-size:11px; margin-left:2px; }
+  ul.plain a { color:var(--ink); }
   footer { margin-top:64px; font-size:13px; color:var(--faint); }
   @media (max-width:680px) {
     .row { grid-template-columns:1fr; gap:10px; }
@@ -62,7 +64,7 @@
   <div class="meta"><span>Report</span><span id="updated">Updated November 23 2026</span></div>
   <h1>Nigeria's Fintech Companies, Mapped</h1>
   <p class="lede"><strong>No single list holds "all" of them. The best count is 433+ companies across 12 categories, and a handful dominate.</strong>
-    That figure comes from Segun Adeyemi's Nigeria Fintech Map 2024, which its own authors call a snapshot rather than a full list.
+    That figure comes from Segun Adeyemi's Nigeria Fintech Map 2024, which its own authors call a snapshot rather than a full list.<sup><a href="https://www.linkedin.com/posts/segunadeyemi_fintech-nigeria-2024inreview-activity-7301197229858406401-RQNV/" target="_blank" rel="noopener" title="Nigeria Fintech Map 2024">[1]</a></sup>
     Below are about 90 of the most important names, grouped by what they do. The top players are confirmed against 2026 reporting.
     The longer lists are well-known names whose current status you should check before relying on them.</p>
   <div class="stats" id="stats"></div>
@@ -143,7 +145,7 @@ fetch('data.json', { cache: 'no-cache' }).then(r => r.json()).then(d => {
   render('');
   document.getElementById('q').addEventListener('input', e => render(e.target.value));
   document.getElementById('exits').innerHTML = d.exits.map(e => `<li>${esc(e)}</li>`).join('');
-  document.getElementById('registers').innerHTML = d.registers.map(r => `<li>${r.url ? `<a href="${esc(r.url)}">${esc(r.name)}</a>` : `<span style="color:var(--ink)">${esc(r.name)}</span>`}: ${esc(r.desc)}</li>`).join('');
+  document.getElementById('registers').innerHTML = d.registers.map(r => `<li>${r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.name)}</a>` : `<span style="color:var(--ink)">${esc(r.name)}</span>`}: ${esc(r.desc)}</li>`).join('');
 });
 
 const form = document.getElementById('form'), status = document.getElementById('status'), btn = document.getElementById('send');
